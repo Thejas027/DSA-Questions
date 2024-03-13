@@ -65,6 +65,66 @@ public:
         }
         return sum == orginalNum;
     }
+
+    // function to find the divisor of a given number  Time complexcity--> O(n)
+    void numDivisor(int n)
+    {
+        for (int i = 1; i <= (n / 2); i++)
+        {
+            if (n % i == 0)
+                cout << i << " ";
+        }
+    }
+    // with use of STL and better time complexcity --> O(sqrt(n) * log(sqrt(n)))
+    void numDivisor2(int n)
+    {
+        vector<int> ls;
+        for (int i = 1; i * i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                ls.push_back(i);
+                if ((n / i) != i)
+                    ls.push_back(n / i);
+            }
+        }
+        sort(ls.begin(), ls.end());
+        for (auto it : ls)
+            cout << it << " ";
+    }
+
+    void primeNum(int n)
+    {
+        int count = 0;
+        for (int i = 1; i * i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                count++;
+                if ((n / i) != i)
+                    count++;
+            }
+        }
+        if (count == 2)
+            cout << n << " is a prime number" << endl;
+        else
+            cout << n << " is not a prime number" << endl;
+    }
+
+    // function to find the GCD || HCF of a given number (Eculidean Algorithm)
+    int gcd(int a, int b)
+    {
+        while (a > 0 && b > 0)
+        {
+            if (a > b)
+                a = a % b;
+            else
+                b = b % a;
+        }
+        if (a == 0)
+            return b;
+        return a;
+    }
 };
 
 int main()
@@ -79,5 +139,11 @@ int main()
     cout << "Is palindrome? " << (op.palindromeNum(n) ? "Yes" : "No") << endl;
     cout << "Reversed number: " << op.ReverseNum(n) << endl;
     cout << "Is Armstrong? " << (op.Armstrong(n) ? "Yes" : "No") << endl;
+    cout << "The Divisor of a given number : ";
+    op.numDivisor2(n);
+    cout << endl;
+    op.primeNum(n);
+    cout << "GCD of Two number : " << op.gcd(52, 10); // chnage accordingly the values of a and b to
+                                                      // find the requried number gcd
     return 0;
 }

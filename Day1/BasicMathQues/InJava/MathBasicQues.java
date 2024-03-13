@@ -1,5 +1,7 @@
 package Day1.BasicMathQues.InJava;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 class Operations {
@@ -55,6 +57,57 @@ class Operations {
         }
         return sum == originalNum;
     }
+
+    // funtion to find the all divisor of a given number
+    public void numDivisor(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0)
+                System.out.print(i + " ");
+        }
+    }
+
+    public void numDivisor2(int n) {
+        ArrayList<Integer> ar = new ArrayList<>();
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                ar.add(i);
+                if ((n / i) != i)
+                    ar.add(n / i);
+            }
+        }
+        ar.sort(Comparator.naturalOrder());
+        for (int it : ar)
+            System.out.print(it + " ");
+    }
+
+    // function to find weather the number is prime or not
+    public void PrimeNum(int n) {
+        int count = 0;
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+                if ((n / i) != i)
+                    count++;
+            }
+        }
+        if (count == 2)
+            System.out.println(n + " is a prime number ");
+        else
+            System.out.println(n + " is not a prime number ");
+    }
+
+    // function to find the GDC||HCF of a two number (Eculidean Algorithm)
+    public int gcd(int a, int b) {
+        while (a > 0 && b > 0) {
+            if (a > b)
+                a = a % b;
+            else
+                b = b % a;
+        }
+        if (a == 0)
+            return b;
+        return a;
+    }
 }
 
 public class MathBasicQues {
@@ -81,6 +134,16 @@ public class MathBasicQues {
             System.out.println(n + " is a Amstrong Number");
         else
             System.out.println(n + " is not a Amstrong Number");
+        //
+        System.out.print("Divisor of " + n + " :");
+        op.numDivisor2(n);
+        //
+        System.out.println();
+        op.PrimeNum(n);
+        //
+        System.out.println();
+        System.out.println("Gcd of two numbers : " + op.gcd(10, 52)); // chnage accordingly the values of a and b to
+                                                                      // find the requried number gcd
         sc.close();
     }
 }
