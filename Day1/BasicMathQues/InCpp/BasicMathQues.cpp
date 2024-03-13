@@ -50,6 +50,21 @@ public:
         }
         return revno;
     }
+
+    // function to find the weather the given number is armstrong number or not
+    bool Armstrong(int n)
+    {
+        int orginalNum = n;
+        int DigitsNum = (int)log10(n) + 1;
+        int sum = 0;
+        while (n > 0)
+        {
+            int ld = n % 10;
+            sum += pow(ld, DigitsNum);
+            n /= 10;
+        }
+        return sum == orginalNum;
+    }
 };
 
 int main()
@@ -60,8 +75,9 @@ int main()
 
     Operations op;
     op.ExtractionOfDigit(n);
-    cout << "Number of digits: " << op.count(n) << std::endl;
-    cout << "Is palindrome? " << (op.palindromeNum(n) ? "Yes" : "No") << std::endl;
-    cout << "Reversed number: " << op.ReverseNum(n) << std::endl;
+    cout << "Number of digits: " << op.count(n) << endl;
+    cout << "Is palindrome? " << (op.palindromeNum(n) ? "Yes" : "No") << endl;
+    cout << "Reversed number: " << op.ReverseNum(n) << endl;
+    cout << "Is Armstrong? " << (op.Armstrong(n) ? "Yes" : "No") << endl;
     return 0;
 }
