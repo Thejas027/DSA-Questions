@@ -1,4 +1,4 @@
-package Day1.BasicMathQues;
+package Day1.BasicMathQues.InJava;
 
 import java.util.Scanner;
 
