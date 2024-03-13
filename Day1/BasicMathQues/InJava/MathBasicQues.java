@@ -2,10 +2,9 @@ package Day1.BasicMathQues.InJava;
 
 import java.util.Scanner;
 
-/**
- * RevNum
- */
 class Operations {
+
+    // function to find the count of a digits in a given number
     public int count(int n) {
         int cnt = 0;
         while (n > 0) {
@@ -24,6 +23,7 @@ class Operations {
         }
     }
 
+    // function to revese the given number
     public int revNum(int n) {
         int revno = 0;
         while (n > 0) {
@@ -33,20 +33,39 @@ class Operations {
         }
         return revno;
     }
+
+    // function to check weather the number is palindrome or not
+    public boolean palindrome(int n) {
+        int orginalNum = n;
+        int revno = 0;
+        while (n > 0) {
+            int ld = n % 10;
+            n /= 10;
+            revno = (revno * 10) + ld;
+        }
+        return revno == orginalNum;
+    }
 }
 
-public class RevNum {
+public class MathBasicQues {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number  : ");
         int n = sc.nextInt();
         Operations op = new Operations();
+        //
         System.out.println("\nThe number of digits in a given number :" + op.count(n));
+        //
         System.out.print("\nDigits from last are : ");
         op.ExtractNum(n);
+        //
         System.out.println("\n\nThe reverse of a given number is : " + op.revNum(n));
-
+        //
+        if (op.palindrome(n))
+            System.out.println("\nIts a plaindrome number");
+        else
+            System.out.println("\nNot a palindrome number ");
         sc.close();
     }
 }
