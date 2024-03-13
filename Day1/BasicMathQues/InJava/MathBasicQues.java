@@ -6,11 +6,7 @@ class Operations {
 
     // function to find the count of a digits in a given number
     public int count(int n) {
-        int cnt = 0;
-        while (n > 0) {
-            n /= 10;
-            cnt++;
-        }
+        int cnt = (int) Math.log10(n) + 1;
         return cnt;
     }
 
@@ -45,6 +41,20 @@ class Operations {
         }
         return revno == orginalNum;
     }
+
+    // function to find the AMSTRONG NUMBER
+    public boolean armstrongNum(int n) {
+        int originalNum = n;
+        int sum = 0;
+        int numDigits = (int) Math.log10(n) + 1;
+
+        while (n > 0) {
+            int ld = n % 10;
+            sum += Math.pow(ld, numDigits);
+            n /= 10;
+        }
+        return sum == originalNum;
+    }
 }
 
 public class MathBasicQues {
@@ -55,17 +65,22 @@ public class MathBasicQues {
         int n = sc.nextInt();
         Operations op = new Operations();
         //
-        System.out.println("\nThe number of digits in a given number :" + op.count(n));
+        System.out.println("The number of digits in a given number :" + op.count(n));
         //
-        System.out.print("\nDigits from last are : ");
+        System.out.print("Digits from last are : ");
         op.ExtractNum(n);
         //
-        System.out.println("\n\nThe reverse of a given number is : " + op.revNum(n));
+        System.out.println("The reverse of a given number is : " + op.revNum(n));
         //
         if (op.palindrome(n))
-            System.out.println("\nIts a plaindrome number");
+            System.out.println(n + " Its a plaindrome number");
         else
-            System.out.println("\nNot a palindrome number ");
+            System.out.println(n + " Not a palindrome number ");
+        //
+        if (op.armstrongNum(n))
+            System.out.println(n + " is a Amstrong Number");
+        else
+            System.out.println(n + " is not a Amstrong Number");
         sc.close();
     }
 }
