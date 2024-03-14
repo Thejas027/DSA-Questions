@@ -54,6 +54,16 @@ public:
 
         return isPalindrome(i + 1, str);
     }
+
+    // function to find the (n)th value of a fib series
+    int fib(int n)
+    {
+
+        if (n <= 1)
+            return n;
+
+        return fib(n - 1) + fib(n - 2);
+    }
 };
 
 int main()
@@ -74,6 +84,7 @@ int main()
     Recurssions rec;
     cout << "The sum of first " << n << " natural numbers: " << rec.SumOfN2(n) << endl;
     cout << "The Factorial of " << n << ": " << rec.factorialOfN(n) << endl;
+    cout << "The last value of a fib series : " << rec.fib(n) << endl;
 
     rec.Reverse(0, arr, n);
     cout << "Reversed array: ";

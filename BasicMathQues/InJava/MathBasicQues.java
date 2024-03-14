@@ -1,4 +1,4 @@
-package Day1.BasicMathQues.InJava;
+package BasicMathQues.InJava;
 
 import java.util.ArrayList;
 import java.util.Comparator;
