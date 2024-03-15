@@ -138,6 +138,37 @@ public:
             cout << arr[k] << " ";
         }
     }
+
+    // optimal approach to move all zeros at the end
+
+    void optimalMoveZero(int arr[], int n)
+    {
+        int j = -1;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] == 0)
+            {
+                j = i;
+                break;
+            }
+        }
+        if (j == -1)
+            return;
+        //
+        for (int i = j + 1; i < n; i++)
+        {
+            if (arr[i] != 0)
+            {
+                swap(arr[i], arr[j]);
+                j++;
+            }
+        }
+        cout << "Array elements after rotation : ";
+        for (int k = 0; k < n; k++)
+        {
+            cout << arr[k] << " ";
+        }
+    }
 };
 
 int main()
@@ -178,7 +209,7 @@ int main()
             arr.optimalLeftRotation(a, d, n);
             break;
         case 4:
-            arr.moveZero(a, n);
+            arr.optimalMoveZero(a, n);
             break;
         default:
             cout << "Invalid choice\n";
