@@ -89,7 +89,7 @@ class ArrayOperations {
     }
 }
 
-public class ArrOperations {
+public class ArrOperations1 {
     public static void main(String[] args) {
         ArrayOperations Arr = new ArrayOperations();
         Scanner sc = new Scanner(System.in);

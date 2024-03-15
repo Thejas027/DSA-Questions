@@ -51,7 +51,7 @@ public:
         cout << endl;
     }
 
-    //  left rotaion of an array by 'd' places
+    //  left rotaion of an array by 'd' places  BRUTE FORCE METHOD
     void LeftRotation(int arr[], int d, int n)
     {
         d = d % n;
@@ -75,13 +75,35 @@ public:
             arr[i] = temp[i - (n - d)];
         }
 
+        delete[] temp;
+    }
+
+    // optimal code of above function
+    void reverse(int arr[], int start, int end)
+    {
+        while (start <= end)
+        {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    void optimalLeftRotation(int arr[], int d, int n)
+    {
+        d = d % n;
+        reverse(arr, 0, d - 1);
+        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - 1);
+
         // loop to print the final array elements
         cout << "Array elements after rotation : ";
         for (int k = 0; k < n; k++)
         {
             cout << arr[k] << " ";
         }
-        delete[] temp;
     }
 };
 
@@ -119,7 +141,7 @@ int main()
             int d;
             cout << "Enter the d value to rotate the array : ";
             cin >> d;
-            arr.LeftRotation(a, d, n);
+            arr.optimalLeftRotation(a, d, n);
             break;
         default:
             cout << "Invalid choice\n";
