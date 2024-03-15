@@ -105,6 +105,39 @@ public:
             cout << arr[k] << " ";
         }
     }
+
+    // brute force approch to move all non zero elements at the last of an array
+    void moveZero(int arr[], int n)
+    {
+        int *temp = new int[n];
+
+        int tempSize = 0;
+
+        // loop to add non zero elements to temp array
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] != 0)
+                temp[tempSize++] = arr[i];
+        }
+        // add back the temp array elements to array
+        for (int i = 0; i < tempSize; i++)
+        {
+            arr[i] = temp[i];
+        }
+
+        // add zero to remaning space
+        for (int i = tempSize; i < n; i++)
+        {
+            arr[i] = 0;
+        }
+
+        // loop to print
+        cout << "Array elements after rotation : ";
+        for (int k = 0; k < n; k++)
+        {
+            cout << arr[k] << " ";
+        }
+    }
 };
 
 int main()
@@ -122,6 +155,7 @@ int main()
         cout << "1. To read the array elements\n";
         cout << "2. Rotations of an array by one bit\n";
         cout << "3.To rotate the array by d place\n";
+        cout << "4.Move all zero to end of a array\n";
         cout << "Enter your choice : ";
         cin >> choice;
 
@@ -143,11 +177,14 @@ int main()
             cin >> d;
             arr.optimalLeftRotation(a, d, n);
             break;
+        case 4:
+            arr.moveZero(a, n);
+            break;
         default:
             cout << "Invalid choice\n";
             break;
         }
-    } while (choice != 4); // Adjusted loop condition to match menu options
+    } while (choice != 5); // Adjusted loop condition to match menu options
 
     return 0;
 }
