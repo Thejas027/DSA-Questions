@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// brute force approch to find the intersection of 2 array  O(n1*n2);
 int main()
 {
 

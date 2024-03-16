@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// optimal way to find the union of 2 array with time complexity of  -->O(n1+n2)
 int main()
 {
 

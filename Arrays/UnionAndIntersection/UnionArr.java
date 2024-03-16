@@ -1,5 +1,6 @@
-package Arrays;
+package Arrays.UnionAndIntersection;
 
+// brute force approach to union the 2 array with time complex of  O(n1*logn + n2 * logn) + O(n1+n2)
 import java.util.*;
 
 public class UnionArr {
