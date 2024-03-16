@@ -14,6 +14,16 @@ public:
         }
     }
 
+    // to display
+    void display(int arr[], int n)
+    {
+        cout << "Array elements after rotation : ";
+        for (int k = 0; k < n; k++)
+        {
+            cout << arr[k] << " ";
+        }
+        cout << endl;
+    }
     // Left rotation of an array by one position  BRUTE FROCE approach time complex = O(n)
     void leftRotate(int arr[], int n)
     {
@@ -25,12 +35,7 @@ public:
         arr[n - 1] = temp;
 
         // to print the array
-        cout << "Array elements after rotation : ";
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
-        cout << endl;
+        display(arr, n);
     }
 
     // right rotaion of an array
@@ -43,12 +48,7 @@ public:
         }
         arr[n - 1] = lastElement;
         // to print the array
-        cout << "Array elements after rotation : ";
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
-        cout << endl;
+        display(arr, n);
     }
 
     //  left rotaion of an array by 'd' places  BRUTE FORCE METHOD
@@ -99,11 +99,7 @@ public:
         reverse(arr, 0, n - 1);
 
         // loop to print the final array elements
-        cout << "Array elements after rotation : ";
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
+        display(arr, n);
     }
 
     // brute force approch to move all non zero elements at the last of an array
@@ -130,13 +126,7 @@ public:
         {
             arr[i] = 0;
         }
-
-        // loop to print
-        cout << "Array elements after rotation : ";
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
+        display(arr, n);
     }
 
     // optimal approach to move all zeros at the end
@@ -163,11 +153,7 @@ public:
                 j++;
             }
         }
-        cout << "Array elements after rotation : ";
-        for (int k = 0; k < n; k++)
-        {
-            cout << arr[k] << " ";
-        }
+        display(arr, n);
     }
 };
 
