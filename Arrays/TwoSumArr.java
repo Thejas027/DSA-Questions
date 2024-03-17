@@ -3,7 +3,11 @@ package Arrays;
 import java.util.Scanner;
 
 class TwoSumFinder {
-
+    /*
+     * BRUTER FORCE APPROACH TO FIND THE SUM
+     * TIME COMPLEX -- O(N*N)
+     * SPACE COMPLEX --o(1)
+     */
     public boolean findTwoSum(int[] arr, int k) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
