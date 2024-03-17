@@ -1,3 +1,5 @@
+// program to find the missing number in a given array
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -62,9 +64,11 @@ public:
         }
         return (sum - sum2);
     }
+
     /*
     ANOTHER OPTIMAL SOLUTION TO FIND THE MISSING NUMBER IN A ARRAY
     [XOR]--METHOD
+    TIME COMPLEX -- o(2N)
     */
     int missingNum4(int arr[], int n)
     {
@@ -79,10 +83,11 @@ public:
         return (xor1 ^ xor2);
     }
 };
+
 int main()
 {
-    int arr[] = {0, 1, 2, 4, 5, 6};
+    int arr[] = {0, 1, 2, 4};
     Arrays a;
-    cout << "Missing Number : " << a.missingNum4(arr, 6);
+    cout << "Missing Number : " << a.missingNum(arr, 5);
     return 0;
 }

@@ -3,7 +3,7 @@ package Arrays.UnionAndIntersection;
 // brute force approach to union the 2 array with time complex of  O(n1*logn + n2 * logn) + O(n1+n2)
 import java.util.*;
 
-public class UnionArr {
+public class UnionArr1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
