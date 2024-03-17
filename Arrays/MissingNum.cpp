@@ -30,7 +30,7 @@ public:
         return n;
     }
 
-    // BETTTER SOLUTION TO FIND THE MISSING NUMBER IN A GIVEN ARRAY
+    // BETTTER SOLUTION TO FIND THE MISSING NUMBER IN A GIVEN ARRAY using hashing
     int missingNum2(int arr[], int n)
     {
         int hash[n + 1] = {0};

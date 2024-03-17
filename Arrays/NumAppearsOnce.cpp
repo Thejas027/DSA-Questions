@@ -27,12 +27,27 @@ public:
         }
         return -1;
     }
+
+    /*
+    OPTIMAL SOLUTION WITH MUCH BETTER TC & SC
+    TIME COMPLEX -- O(N)
+    SPACE COMPLEX -- O(1)
+    */
+    int numOnce2(vector<int> &arr)
+    {
+        int xor1 = 0;
+        int n = arr.size();
+        for (int i = 0; i < n; i++)
+            xor1 = xor1 ^ arr[i];
+
+        return xor1;
+    }
 };
 
 int main()
 {
-    vector<int> arr = {1, 1, 2, 2, 3, 4, 4};
+    vector<int> arr = {1, 1, 2, 3, 3, 4, 4};
     NumAppearsOnce num;
-    cout << "The number which had appeared once : " << num.numOnce(arr);
+    cout << "The number which had appeared once : " << num.numOnce2(arr);
     return 0;
 }
