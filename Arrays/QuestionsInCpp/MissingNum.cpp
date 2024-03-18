@@ -86,8 +86,8 @@ public:
 
 int main()
 {
-    int arr[] = {0, 1, 2, 4};
+    int arr[] = {0, 1, 2, 3, 4, 6, 7};
     Arrays a;
-    cout << "Missing Number : " << a.missingNum(arr, 5);
+    cout << "Missing Number : " << a.missingNum4(arr, 8);
     return 0;
 }
