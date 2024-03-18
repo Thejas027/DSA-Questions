@@ -20,8 +20,17 @@ public:
     */
 
     int majorityEle2(vector<int> v);
+
+    /*
+    OPTIMAL SOULTION USING MOORE's VOTING ALGORITHM
+    TIME COMPLEXCITY -- O(N)
+    SPACE COMPLEXCITY --O(1)
+    */
+
+    int majorityEle3(vector<int> v);
 };
 
+// declaration of majority function 1 outside the class
 int majorityElement ::majorityEle(vector<int> v)
 {
     int n = v.size();
@@ -39,6 +48,7 @@ int majorityElement ::majorityEle(vector<int> v)
     return -1;
 }
 
+// declaration of majority function 2 outside the class
 int majorityElement ::majorityEle2(vector<int> v)
 {
     map<int, int> m;
@@ -56,10 +66,44 @@ int majorityElement ::majorityEle2(vector<int> v)
     return -1;
 }
 
+// declaration of majority function 3 outside the class
+
+int majorityElement ::majorityEle3(vector<int> v)
+{
+    int n = v.size();
+    int count = 0;
+    int ele;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (count == 0)
+        {
+            count++;
+            ele = v[i];
+        }
+        else if (v[i] == ele)
+            count++;
+        else
+            count--;
+    }
+
+    // loop to find how many times the ele has occured in a array
+    int count1 = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (v[i] == ele)
+            count1++;
+    }
+    if (count1 > (n / 2))
+        return ele;
+
+    return -1; // majority element not found in the given array
+}
 int main()
 {
     majorityElement mEle;
-    vector<int> arr = {1, 4, 2, 2, 2, 2, 2, 5, 6, 2};
-    cout << "The majority element in a given array : " << mEle.majorityEle2(arr);
+    vector<int> arr = {1, 4, 22, 22, 22, 22, 22, 5, 6, 22};
+    cout << "The majority element in a given array : " << mEle.majorityEle3(arr);
     return 0;
 }
