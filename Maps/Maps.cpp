@@ -1,3 +1,4 @@
+// program to find how many times a particualr number has reapeated using map
 #include <bits/stdc++.h>
 using namespace std;
 
