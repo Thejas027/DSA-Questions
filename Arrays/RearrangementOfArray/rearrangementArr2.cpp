@@ -1,6 +1,6 @@
 /*
 ---VARIETY-2 PROGRAM---
-PROGRAM TO REARRANGE THE POSITIVE AND NEGATIVE NUMBER IN A GIVEN ARRAY
+PROGRAM TO REARRANGE THE POSITIVE AND NEGATIVE NUMBER IN A GIVEN ARRAY where number of posotive and negative number are not equal
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -69,7 +69,7 @@ void rearrangeArray(vector<int> arr)
 int main()
 {
 
-    vector<int> arr = {-4, -2, 1, 3, 8, -9};
+    vector<int> arr = {-4, -2, 1, 3, 8, 9, 10, -7};
     rearrangeArray(arr);
 
     return 0;
