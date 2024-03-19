@@ -7,13 +7,13 @@ void display(vector<int> &arr)
     cout << "The array elements after rearranging : ";
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " , ";
+        cout << arr[i] << "   ";
     }
 }
 /*
 BRUTE FORCE APPROACH TO REARRANGE THE ARRAY ELEMENTS with
-TIME COMPLEXCITY --O(N)
-SPACE COMPLEXCITY --oO(N)
+TIME COMPLEXCITY --O(2*N)
+SPACE COMPLEXCITY --O(N)
 */
 void rearrangeArray(vector<int> arr)
 {
@@ -42,11 +42,39 @@ void rearrangeArray(vector<int> arr)
     display(arr);
 }
 
+/*
+OPTIMAL APPROACH (no much chnage )
+TIME COMPLEXCITY -- O(N)
+SPACE COMPLEXCITY -- O(N)
+*/
+
+void rearrangeArray2(vector<int> arr)
+{
+    int n = arr.size();
+    vector<int> ans(n, 0);
+    int posIdx = 0;
+    int negIdx = 1;
+    for (int i = 0; i <= n; i++)
+    {
+        if (arr[i] > 0)
+        {
+            ans[posIdx] = arr[i];
+            posIdx += 2;
+        }
+        else
+        {
+            ans[negIdx] = arr[i];
+            negIdx += 2;
+        }
+    }
+    display(ans);
+}
+
 int main()
 {
 
     vector<int> arr = {-4, -2, 1, 3, 8, -9};
-    rearrangeArray(arr);
+    rearrangeArray2(arr);
 
     return 0;
 }
