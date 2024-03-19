@@ -30,7 +30,7 @@ void rearrangeArray(vector<int> arr)
     }
     // loop to rearrange the array elements
 
-    int posIndex = 0, negIndex = 0;
+    unsigned int posIndex = 0, negIndex = 0;
     for (int i = 0; i < n; i++)
     {
         if (i % 2 == 0 && posIndex < pos.size())
