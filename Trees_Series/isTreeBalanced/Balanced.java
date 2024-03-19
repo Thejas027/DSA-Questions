@@ -68,7 +68,7 @@ class Tree {
         return getHeight(root) != -1;
     }
 
-    private int getHeight(Node root) {
+    public int getHeight(Node root) {
         if (root == null)
             return 0;
 
@@ -85,7 +85,6 @@ class Tree {
 
         return Math.max(leftHeight, rightHeight) + 1;
     }
-
 }
 
 public class Balanced {
@@ -101,6 +100,6 @@ public class Balanced {
         } else {
             System.out.println("Tree is not balanced ");
         }
-
+        System.out.println("The height of a tree : " + t.getHeight(root));
     }
 }
