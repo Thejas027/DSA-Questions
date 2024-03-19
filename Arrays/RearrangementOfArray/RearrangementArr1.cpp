@@ -1,3 +1,9 @@
+/*
+----VARIETY-1 PROGRAM -------
+PROGRAM TO REARRANGE THE POSITIVE AND NEGATIVE NUMBER WHERE number(elements) of positive and negative number are EQUAL
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
