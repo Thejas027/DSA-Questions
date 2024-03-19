@@ -38,26 +38,53 @@ public:
         if (root == NULL)
             return 0;
 
-        int leftDiameter = treeDiameter(root->leftNode);
-        int rightDiameter = treeDiameter(root->rightNode);
-
         int leftHeight = height(root->leftNode);
         int rightHeight = height(root->rightNode);
 
-        int selfdiameter = leftHeight + rightHeight + 1;
+        int leftDiameter = treeDiameter(root->leftNode);
+        int rightDiameter = treeDiameter(root->rightNode);
 
-        return max(selfdiameter, max(leftDiameter, rightDiameter));
+        int selfDiameter = leftHeight + rightHeight + 1;
+
+        return max(selfDiameter, max(leftDiameter, rightDiameter));
+    }
+
+    // single function using pair concept to find the both hight and diameter of a tree
+
+    pair<int, int> heightAndDiameter(Node *root)
+    {
+        if (root == NULL)
+            return {0, 0};
+
+        pair<int, int> left = heightAndDiameter(root->leftNode);
+        pair<int, int> right = heightAndDiameter(root->rightNode);
+
+        int height = max(left.first, right.first) + 1;
+        int diameter = max({left.second, right.second, left.first + right.first + 1});
+
+        return {height, diameter};
     }
 };
+
 int main()
 {
-    Node *root = new Node(10);
-    root->leftNode = new Node(20);
-    root->rightNode = new Node(30);
-    root->leftNode->rightNode = new Node(40);
-    root->leftNode->rightNode->leftNode = new Node(50);
+    Node *root = new Node(1);
+    root->leftNode = new Node(2);
+    root->rightNode = new Node(3);
+    root->rightNode->leftNode = new Node(4);
+    root->rightNode->rightNode = new Node(7);
+    root->rightNode->leftNode->leftNode = new Node(5);
+    root->rightNode->leftNode->leftNode->leftNode = new Node(6);
+    root->rightNode->rightNode = new Node(8);
+    root->rightNode->rightNode->rightNode = new Node(9);
     Tree t;
-    cout << "The height of a tree : " << t.height(root) << endl;
-    cout << "The diameter of a tree : " << t.treeDiameter(root) << endl;
+    // cout << "The height of a tree : " << t.height(root) << endl;
+    // cout << "The diameter of a tree : " << t.treeDiameter(root) << endl;
+
+    // calling of pair method in a main function
+    pair<int, int> result = t.heightAndDiameter(root);
+
+    cout << "The height of a tree : " << result.first << endl;
+    cout << "The diameter of a tree : " << result.second << endl;
     return 0;
 }
