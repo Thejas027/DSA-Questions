@@ -32,7 +32,7 @@ public:
     }
 
     // function to find the longest path or diameter of a tree
-
+    // TIME COMPLEXCITY -- O(N1*N2) -- N1--> to find the height ,N2-->to find the diameter
     int treeDiameter(Node *root)
     {
         if (root == NULL)
@@ -50,7 +50,7 @@ public:
     }
 
     // single function using pair concept to find the both hight and diameter of a tree
-
+    // TIME COMPLEXCITY -- O(N)
     pair<int, int> heightAndDiameter(Node *root)
     {
         if (root == NULL)
