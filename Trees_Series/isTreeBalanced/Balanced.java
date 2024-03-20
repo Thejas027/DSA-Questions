@@ -52,7 +52,7 @@ class Tree {
         boolean left = isBalanced(root.leftNode);
         boolean right = isBalanced(root.rightNode);
 
-        if (left || right)
+        if (left || right) // checking that if any one is false
             return false;
 
         return true;
