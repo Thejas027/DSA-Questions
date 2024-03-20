@@ -9,54 +9,43 @@ public:
     TIME COMPLEXCITY -- O(N*N*N)
     SPACE COMPLEX --O(1)
     */
-    int maxVal1(vector<int> arr)
-    {
-        int n = arr.size();
-        int maxi = INT_MIN;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = i; j < n; j++)
-            {
-                int sum = 0;
-                for (int k = i; k <= j; k++)
-                {
-                    sum += arr[k];
-                    maxi = max(sum, maxi);
-                }
-            }
-        }
-        return maxi;
-    }
+    int maxVal1(vector<int> arr);
 
     /*
     BETTER SOLUTION TO FIND THE MAX SUM with
     TIME COMPLEX -- O(N*N)
     SPACE COMPLEX -- O(1)
     */
-    int maxVal2(vector<int> arr);
+    int maxVal2(vector<int> arr); // function declared outside the class
 
     /*
     OPTIMAL SOLUTION TO FIND THE MAX SUm using KADANE's algo  with
     TIME COMPLEX -- O(N)
     SPACE COMPLEX -- O(1)
     */
-    int maxVal3(vector<int> arr)
-    {
-        int n = arr.size();
-        int maxSum = INT_MIN;
-        int currentSum = 0;
-        for (int i = 0; i < n; i++)
-        {
-            currentSum += arr[i];
-            if (currentSum < 0)
-            {
-                currentSum = 0;
-            }
-            maxSum = max(maxSum, currentSum);
-        }
-        return maxSum;
-    }
+    int maxVal3(vector<int> arr);
 };
+
+// function declration outside the class using scope resolution operator
+
+int SubArray ::maxVal1(vector<int> arr)
+{
+    int n = arr.size();
+    int maxi = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i; j < n; j++)
+        {
+            int sum = 0;
+            for (int k = i; k <= j; k++)
+            {
+                sum += arr[k];
+                maxi = max(sum, maxi);
+            }
+        }
+    }
+    return maxi;
+}
 
 int SubArray ::maxVal2(vector<int> arr)
 {
@@ -72,6 +61,23 @@ int SubArray ::maxVal2(vector<int> arr)
         }
     }
     return maxi;
+}
+
+int SubArray ::maxVal3(vector<int> arr)
+{
+    int n = arr.size();
+    int maxSum = INT_MIN;
+    int currentSum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        currentSum += arr[i];
+        if (currentSum < 0)
+        {
+            currentSum = 0;
+        }
+        maxSum = max(maxSum, currentSum);
+    }
+    return maxSum;
 }
 
 int main()
