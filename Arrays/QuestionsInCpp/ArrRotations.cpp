@@ -1,3 +1,12 @@
+/*
+  ------MENU DRIVEN--------
+PROGRAM TO ROTATE THE ARRAY LEFT AND RIGHT BY ONE BIT,INCLUDES BRUTE FORCE APPROACAH WITH IT's TIME COMPLEXCITES
+
+ALSO CONATIANS THE OPTIAML SOUTLION TO ROTATE THE ARRAY BY 'D' PLACES WITH OPTIMAL TIME COMPLEXCITY
+
+PROGRMA ALSO CONTAINS THE CODE TO MOVE ALL THE ARRAY ZEROS TO END OF ARRAY HAS BRUTE AND OPTIMAL SOULTION WITH THEIR TIME COMPLEXCITIES
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -14,7 +23,7 @@ public:
         }
     }
 
-    // to display
+    // function to display
     void display(int arr[], int n)
     {
         cout << "Array elements after rotation : ";
@@ -38,7 +47,7 @@ public:
         display(arr, n);
     }
 
-    // right rotaion of an array
+    // right rotaion of an array BRUTE FORCE APPROACH time complex -- O(n)
     void RightRotate(int arr[], int n)
     {
         int lastElement = arr[n - 1];
@@ -78,7 +87,9 @@ public:
         delete[] temp;
     }
 
-    // optimal code of above function
+    // OPTIMAL SOLUTION TO ROTATE THE ARRAY BY 'D' PLACES WITH OPTIMAL TIME COMPLEXCTY -- O(N)
+
+    // supproting function ....
     void reverse(int arr[], int start, int end)
     {
         while (start <= end)
@@ -90,7 +101,7 @@ public:
             end--;
         }
     }
-
+    // main OPTIMAL SOLUTION FUNCTION
     void optimalLeftRotation(int arr[], int d, int n)
     {
         d = d % n;
@@ -98,7 +109,6 @@ public:
         reverse(arr, d, n - 1);
         reverse(arr, 0, n - 1);
 
-        // loop to print the final array elements
         display(arr, n);
     }
 

@@ -1,21 +1,28 @@
-//
-
+/*
+ZERO's , ONE's and TWO's SORTING PROGRAM with BRUTE FORCE APPROACH AND OPTIMAL SOLUTION WITH THEIR TIME COMPLEXCITIES RESPETCTIVELY
+Program to sort the array elements where array conations zeros , ones and tows only
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 class Sorting
 {
 public:
+    /*
+   BETTER SOLUTION to sort the given array with
+   TIME COMPLEX -- O(N)
+   SPACE COMPLEX -- O(1)
+ */
     void sortNum1(vector<int> &arr);
+    /*
+    OPTIMAL SOLUTION to sort the given array with
+    TIME COMPLEX -- O(N)
+    SPACE COMPLEX -- O(1)
+    */
     void sortNum2(vector<int> &arr);
 };
 
-/*
-BETTER SOLUTION to sort the given array with
-TIME COMPLEX -- O(N)
-SPACE COMPLEX -- O(1)
- */
-
+// FUCTION DECLARED OUTSIDE THE CLASS USING SCOPE RESOLUTION OPERATOR
 void Sorting ::sortNum1(vector<int> &arr)
 {
     int c1 = 0, c2 = 0, c3 = 0;
@@ -42,11 +49,7 @@ void Sorting ::sortNum1(vector<int> &arr)
         cout << arr[i] << " ";
     }
 }
-/*
-OPTIMAL SOLUTION to sort the given array with
-TIME COMPLEX -- O(N)
-SPACE COMPLEX -- O(1)
-*/
+
 void Sorting ::sortNum2(vector<int> &arr)
 {
     int n = arr.size();
