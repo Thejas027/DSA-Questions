@@ -21,7 +21,7 @@ public:
 };
 
 // function to find the max sum of a path (returns the max sum value)
-
+// supporting fumction to maxsum
 int maxPathDown(Node *root, int &maxi)
 {
     if (root == NULL)
@@ -35,6 +35,7 @@ int maxPathDown(Node *root, int &maxi)
     return (root->data) + max(leftSum, rightSum);
 }
 
+// main fuction that returns the sum to main fucntion
 int maxSum(Node *root)
 {
     int maxi = INT_MIN;
