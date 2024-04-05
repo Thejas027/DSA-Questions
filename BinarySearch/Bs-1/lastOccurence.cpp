@@ -7,7 +7,7 @@ below code return the index of last occurence of target element
 #include <bits/stdc++.h>
 using namespace std;
 
-int FirstOccurence(int *arr, int size, int key)
+int LastOccurence(int *arr, int size, int key)
 {
     int start = 0;
     int end = size - 1;
@@ -26,10 +26,6 @@ int FirstOccurence(int *arr, int size, int key)
         {
             end = mid - 1;
         }
-        else
-        {
-            start = mid + 1;
-        }
     }
 
     return result;
@@ -41,11 +37,11 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
     int key = 2;
 
-    int first_occurrence_index = FirstOccurence(arr, size, key);
+    int last_occurrence_index = LastOccurence(arr, size, key);
 
-    if (first_occurrence_index != -1)
+    if (last_occurrence_index != -1)
     {
-        cout << "First occurrence of " << key << " is at index " << first_occurrence_index << endl;
+        cout << "Last occurrence of " << key << " is at index " << last_occurrence_index << endl;
     }
     else
     {
