@@ -1,3 +1,14 @@
+/*
+program to find the minmum difference obatined when a key elements value is subtracted from a given array then the min values parent element is returned
+
+example : arr[] = 2 4 6 7 10  15
+          key = 12
+    on subtracting 12 from each index of array and taking their absolute value we get  min differece as
+                10 8 6 5 2 3
+
+            here min is 2 on subtarcting its parent value means 10 is made to return from the minDiffEle function wi=hich is the required element value
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
