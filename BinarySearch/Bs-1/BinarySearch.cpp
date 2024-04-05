@@ -1,3 +1,11 @@
+/*
+Binary search program to search the element
+below program is a menu driven program where element is searched in sorted array -->Array may be sorted in ascending or descending order
+1.binary search of an element if array is sorted in ascending order
+2.binary search of an element if array is sorted in descending order
+3.array sorted is unknown
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 // binary search function which returns the index of an element to be searched only if array is sorted in ascending order
@@ -65,37 +73,6 @@ int binarySearch3(int *arr, int size, int element)
         }
         // this loop excutes if the array is sorted in descending order
         else
-        {
-            if (element < arr[mid])
-                start = mid + 1;
-            else
-                end = mid - 1;
-        }
-    }
-    return -1;
-}
-
-int binarySearch4(int *arr, int size, int element)
-{
-    int start = 0;
-    int end = size - 1;
-
-    while (start <= end)
-    {
-        int mid = start + (end - start) / 2;
-
-        if (arr[mid] == element)
-            return mid;
-
-        // Check the order of the first and last elements to determine the sorting order
-        if (arr[start] < arr[end]) // Ascending order
-        {
-            if (element < arr[mid])
-                end = mid - 1;
-            else
-                start = mid + 1;
-        }
-        else // Descending order
         {
             if (element < arr[mid])
                 start = mid + 1;

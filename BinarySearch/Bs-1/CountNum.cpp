@@ -1,3 +1,10 @@
+/*
+program to count the number of times the target element is present in a given sorted array
+using binary search method this is done with optimal TIME COMPLEXCITY.
+--------TIME COMPLEXCITY == O(log n)
+below program will return the count of an target element
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;

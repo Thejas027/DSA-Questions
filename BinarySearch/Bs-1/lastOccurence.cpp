@@ -1,3 +1,9 @@
+/*
+program which retuns the last index of an element which appears more than once
+using binary search this is done for optimal time complexcity
+below code return the index of last occurence of target element
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

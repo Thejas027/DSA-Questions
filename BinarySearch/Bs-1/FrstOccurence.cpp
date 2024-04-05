@@ -1,3 +1,8 @@
+/*
+program which retuns the first index of an element which appears more than once
+using binary search this is done for optimal time complexcity
+below code return the index of first occurence of target element
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

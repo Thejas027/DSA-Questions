@@ -1,3 +1,11 @@
+/*
+program to find the floor of an given element
+  floor 0f ele  == greatest element but smaller than the given element
+  example : arr[] = 1,2,3,4,8,11,12
+  floor of 5 = 4
+   where the below code gives the floor of an array element if the given target is not found if the target == arr[ele] then target element value will be returned
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
