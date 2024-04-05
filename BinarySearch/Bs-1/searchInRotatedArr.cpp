@@ -43,7 +43,7 @@ int searchEleInRotatedArr(int *arr, int size, int key)
     if (idx != -1)
     {
         int b1 = binarySearch(arr, 0, idx - 1, key);
-        int b2 = binarySearch(arr, idx + 1, size - 1, key);
+        int b2 = binarySearch(arr, idx - 1, size - 1, key);
 
         if (b1 != -1)
             return b1;
@@ -60,7 +60,7 @@ int main()
 
     int arr[] = {11, 12, 14, 18, 2, 4, 5, 8};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int key = 8;
+    int key = 11;
     cout << "element found at index : " << searchEleInRotatedArr(arr, size, key) << endl;
 
     return 0;
