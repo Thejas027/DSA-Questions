@@ -51,6 +51,7 @@ public:
 };
 
 int main()
+    mnbxz
 {
       vector<int> arr = {2, 4, 5, 10, 6, 1};
       BitonicArray b;
