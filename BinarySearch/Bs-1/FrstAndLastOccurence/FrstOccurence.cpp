@@ -21,14 +21,11 @@ int FirstOccurence(int *arr, int size, int key)
             result = mid;
             end = mid - 1;
         }
-        else if (key < arr[mid])
-        {
-            end = mid - 1;
-        }
-        else
-        {
+
+        else if (key > arr[mid])
             start = mid + 1;
-        }
+        else
+            end = mid + 1;
     }
 
     return result;
@@ -36,9 +33,9 @@ int FirstOccurence(int *arr, int size, int key)
 
 int main()
 {
-    int arr[] = {1, 2, 2, 2, 3, 4, 5, 6, 7};
+    int arr[] = {1, 2, 3, 3, 4, 5, 6, 7};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int key = 2;
+    int key = 3;
 
     int first_occurrence_index = FirstOccurence(arr, size, key);
 
