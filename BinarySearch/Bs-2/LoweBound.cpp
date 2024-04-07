@@ -1,3 +1,7 @@
+/*
+program to find the lower bound of an given key in a sorted array
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,7 +13,7 @@ public:
         int n = arr.size();
         int start = 0;
         int end = n - 1;
-        int result = n;
+        int result = 0;
         while (start <= end)
         {
             int mid = start + (end - start) / 2;
@@ -28,8 +32,8 @@ public:
 
 int main()
 {
-    vector<int> arr = {3, 3, 3, 3, 4, 5, 6, 7};
-    int key = 3;
+    vector<int> arr = {2, 3, 6, 7, 8, 11, 11, 11, 12};
+    int key = 2;
     BinarySearch b;
     cout << "The lower bound of the given key element is at index : " << b.lowerBound(arr, key) << endl;
     return 0;
