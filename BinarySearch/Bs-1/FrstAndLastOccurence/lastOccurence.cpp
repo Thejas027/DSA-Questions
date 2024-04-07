@@ -24,6 +24,8 @@ int LastOccurence(int *arr, int size, int key)
         }
         else if (key < arr[mid])
             end = mid - 1;
+        else
+            start = mid + 1;
     }
 
     return result;
