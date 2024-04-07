@@ -25,7 +25,7 @@ int sortedArrRotation(int *arr, int size)
         int next = (mid + 1) % size;
         int prev = (mid + size - 1) % size;
 
-        if (arr[mid] <= arr[next] && arr[mid] <= arr[(mid - 1 + size) % size])
+        if (arr[mid] <= arr[next] && arr[mid] <= arr[prev])
             return mid;
 
         if (arr[start] <= arr[mid])
