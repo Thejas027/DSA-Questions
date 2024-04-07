@@ -50,7 +50,7 @@ int CountNum(int *arr, int size, int key)
 
 int main()
 {
-    int arr[] = {1, 2, 2, 2, 3, 4, 5};
+    int arr[] = {1, 2, 2, 2, 2, 2, 2, 2, 2, 4, 5};
     int target = 2;
     int size = sizeof(arr) / sizeof(arr[0]);
 
