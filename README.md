@@ -1,4 +1,4 @@
-# Algorithm Practice Repository 🚀
+# Strive Data Sheet Problems 🚀
 
 Welcome to the Algorithm Practice Repository! This repository is a comprehensive collection of solutions to algorithmic problems, covering a wide range of topics in Data Structures and Algorithms. 📚💡
 
