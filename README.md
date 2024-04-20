@@ -1,7 +1,7 @@
 # Strive Data Sheet Problems 🚀
 
-Welcome to the Algorithm Practice Repository! This repository is a comprehensive collection of solutions to algorithmic problems, covering a wide range of topics in Data Structures and Algorithms. 📚💡
-
+Welcome to the Strive Data Sheet Problems repository! This repository is a comprehensive collection of solutions to problems from Strive's data sheets. 📚💡
+langauge used is Cpp and even for some of the questions Java code is also available.
 ## Table of Contents 📖
 
 1. [Array Series](#array-series)
@@ -17,13 +17,21 @@ Welcome to the Algorithm Practice Repository! This repository is a comprehensive
 
 ## 1. Array Series 🎯
 
-Explore solutions to problems focusing on arrays, including manipulation, traversal, and sorting techniques. This series covers a wide range of array-related topics to help you strengthen your understanding and skills in handling arrays effectively.
+Explore solutions to problems focusing on arrays, including manipulation, traversal, and sorting techniques,
+->Kadanes Algo
+->Stock Problem 
+->some Sub array problems 
+->Intersection and Union problems etc...
 
 ---
 
 ## 2. Basic Maths Series 🔢
 
-Discover a collection of problems and solutions that test your understanding of basic mathematical concepts and operations. From arithmetic to algebra, this series provides opportunities to hone your mathematical skills while applying them to algorithmic problem-solving.
+Discover a collection of problems and solutions that test your understanding of basic mathematical concepts and operations,
+->Extraction of digits 
+->Palindrome
+->Revering the number
+->Amstrong Number etc...
 
 ---
 
@@ -35,13 +43,13 @@ Delve into the binary search algorithm and its applications in various problem-s
 
 ## 4. Hashing Basics 📂
 
-Dive into the basics of hashing, including its principles, applications, and implementation details. This series covers fundamental hashing concepts such as hash functions, collision resolution strategies, and the use of hash tables, equipping you with essential knowledge for effective data storage and retrieval.
+Dive into the basics of hashing implementaion in Cpp,This series contain how a hashing can be used wehre here counting how many times certain number or character has been reapeated.
 
 ---
 
 ## 5. Maps Implementation 🗺️
 
-Learn about maps and their implementation, including how to use them in different programming languages. This series explores various map data structures, such as associative arrays and dictionaries, along with their operations and applications in solving real-world problems.
+Learn about maps and their implementation and folder contains how map can be used to count how many times the number has been repeated.
 
 ---
 
@@ -53,14 +61,17 @@ Master the art of recognizing and implementing basic patterns in algorithms and 
 
 ## 7. Recursion 🔄
 
-Explore the concept of recursion, its advantages, and how to implement it in various programming scenarios. This series covers recursive algorithms, techniques, and best practices, enabling you to tackle problems involving self-referential functions and divide-and-conquer strategies with confidence.
+This Recursion folder contains some basic porblems, to know how recuression works 
 
 ---
 
 ## 8. Trees Series 🌳
 
-Embark on a journey through tree data structures, including binary trees, AVL trees, and more. This series offers solutions to problems related to tree traversal, manipulation, and optimization, empowering you to master one of the most versatile and powerful data structures in computer science.
-
+This folder contians some important questions on trees such has,
+->Is Tree Balanced
+->Max Depth of a tree
+->Max Sum Path
+these questions can be both in Cpp and Java also.
 ---
 
 Happy coding! 🚀
