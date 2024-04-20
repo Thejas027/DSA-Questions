@@ -67,11 +67,11 @@ This Recursion folder contains some basic porblems, to know how recuression work
 
 ## 8. Trees Series 🌳
 
-This folder contians some important questions on trees such has,
+<h6>This folder contians some important questions on trees such has,
 ->is tree balanced <br>
 ->max depth of a tree<br>
 ->max sum path<br>
-these questions can be both in Cpp and Java also.
+these questions can be both in Cpp and Java also.</h6>
 ---
 
 Happy coding! 🚀
