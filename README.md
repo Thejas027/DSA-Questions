@@ -17,7 +17,7 @@ langauge used is Cpp and even for some of the questions Java code is also availa
 
 ## 1. Array Series 🎯
 
-Explore solutions to problems focusing on arrays, including manipulation, traversal, and sorting techniques,
+Explore solutions to problems focusing on arrays, including manipulation, traversal, and sorting techniques,<br>
 ->Kadanes Algo <br>
 ->Stock Problem <br>
 ->some Sub array problems <br>
@@ -27,7 +27,7 @@ Explore solutions to problems focusing on arrays, including manipulation, traver
 
 ## 2. Basic Maths Series 🔢
 
-Discover a collection of problems and solutions that test your understanding of basic mathematical concepts and operations,
+Discover a collection of problems and solutions that test your understanding of basic mathematical concepts and operations,<br>
 ->Extraction of digits <br>
 ->Palindrome<br>
 ->Revering the number<br>
@@ -67,11 +67,12 @@ This Recursion folder contains some basic porblems, to know how recuression work
 
 ## 8. Trees Series 🌳
 
-<h6>This folder contians some important questions on trees such has,
+This folder contians some important questions on trees such has,<br>
 ->is tree balanced <br>
 ->max depth of a tree<br>
 ->max sum path<br>
-these questions can be both in Cpp and Java also.</h6>
+these questions can be both in Cpp and Java also.
+
 ---
 
 Happy coding! 🚀
