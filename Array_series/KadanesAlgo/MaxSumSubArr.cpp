@@ -1,3 +1,7 @@
+/*
+program to find the maximum sum of an given array
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -84,5 +88,5 @@ int main()
 {
     vector<int> arr = {-2, -3, 4, -1, -2, 1, 5, -3};
     SubArray s;
-    cout << "The max sum of a sub array : " << s.maxVal3(arr);
+    cout << "The max sum of a sub array : " << s.maxVal2(arr);
 }

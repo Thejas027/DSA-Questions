@@ -36,8 +36,8 @@ public:
         int num2 = abs(arr[end] - key);
 
         if (num1 > num2)
-            return num2;
-        return num1;
+            return arr[end];
+        return arr[start];
     }
 };
 
@@ -45,7 +45,7 @@ int main()
 {
     int arr[] = {1, 4, 5, 6, 7, 10, 15};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int key = 8;
+    int key = 3;
 
     BSearch b;
     cout << "The element which gives the min differece for a key element of  " << key << " is given by  = " << b.MinDiffEle(arr, size, key) << endl;

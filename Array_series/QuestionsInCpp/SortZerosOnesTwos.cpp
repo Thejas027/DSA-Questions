@@ -1,6 +1,6 @@
 /*
 ZERO's , ONE's and TWO's SORTING PROGRAM with BRUTE FORCE APPROACH AND OPTIMAL SOLUTION WITH THEIR TIME COMPLEXCITIES RESPETCTIVELY
-Program to sort the array elements where array conations zeros , ones and tows only
+Program to sort the array elements where array conatins zeros , ones and tows only
 */
 #include <bits/stdc++.h>
 using namespace std;

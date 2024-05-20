@@ -22,7 +22,7 @@ public:
     int majorityEle2(vector<int> v);
 
     /*
-    OPTIMAL SOULTION USING MOORE's VOTING ALGORITHM
+    OPTIMAL SOULTION USING MOORE's VOTING ALGORITHM 
     TIME COMPLEXCITY -- O(N)
     SPACE COMPLEXCITY --O(1)
     */

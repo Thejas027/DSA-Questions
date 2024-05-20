@@ -102,8 +102,8 @@ public class ArrOpeartions {
             System.out.println("1.To read the elements ");
             System.out.println("2.Largest elements in the array");
             System.out.println("3.Smallests element in the array");
-            System.out.println("4.To check weater the array is sorted or not ");
-            System.out.println("5.Remove the duplicates element and retuns number of elements after removing");
+            System.out.println("4.To check weather the array is sorted or not ");
+            System.out.println("5.Remove the duplicates element and returns number of elements after removing");
             System.out.println("6.Exit");
 
             System.out.println("Enter your choice : ");
