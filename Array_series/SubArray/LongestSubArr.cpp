@@ -25,39 +25,41 @@ public:
         return len;
     }
 
-    /* optimal solution to find the length of sum of lognest sub array
-    TIME COMPLEX -- O(2N)
-    SPACE COMPLE -- O(1)
-    */
     int subArr2(vector<int> arr, int k)
     {
+        int left = 0, right = 0;
         int n = arr.size();
-        int len = 0;
-        int right = 0, left = 0;
-        long long sum = 0;
+        int maxLen = 0;
+        int sum = 0;
 
         while (right < n)
         {
             sum += arr[right];
 
+            // Shrink the window until the sum is less than or equal to k
             while (left <= right && sum > k)
             {
                 sum -= arr[left];
                 left++;
             }
+
+            // Check if the current sum equals k
             if (sum == k)
-                len = max(len, right - left + 1);
+            {
+                maxLen = max(maxLen, right - left + 1);
+            }
 
             right++;
         }
-        return len;
+
+        return maxLen;
     }
 };
 
 int main()
 {
 
-    vector<int> arr = {1, 2, 3, 1, 1, 1, 5, 4};
+    vector<int> arr = {-13, 0, 6, 15, 16, 2, 15, -12, 17, -16, 0, -3, 19, -3, 2, -9, -6};
 
     int k;
 

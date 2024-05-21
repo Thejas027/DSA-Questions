@@ -1,6 +1,20 @@
 package Arrays.QuestionsInJava;
-
 import java.util.Scanner;
+
+class Pair {
+    int first;
+    int second;
+
+    Pair(int first, int second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + first + "," + second + ")";
+    }
+}
 
 class TwoSumFinder {
     /*
@@ -17,6 +31,24 @@ class TwoSumFinder {
         }
         return false;
     }
+
+    public Pair findTwoSum2(int[] arr, int k) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            if (sum == k) {
+                return new Pair(left, right);
+            } else if (sum > k)
+                right--;
+            else
+                left++;
+        }
+
+        return new Pair(-1, -1);
+    }
 }
 
 public class TwoSumArr {
@@ -28,12 +60,14 @@ public class TwoSumArr {
         int k = sc.nextInt();
 
         TwoSumFinder twoSumFinder = new TwoSumFinder();
-        boolean found = twoSumFinder.findTwoSum(arr, k);
+        // Calling findTwoSum2 method
+        Pair foundPair = twoSumFinder.findTwoSum2(arr, k);
 
-        if (found) {
-            System.out.println("Sum found");
+        // Checking if a valid pair was found
+        if (foundPair.first != -1 && foundPair.second != -1) {
+            System.out.println("Pair found at indices: " + foundPair);
         } else {
-            System.out.println("Sum not found");
+            System.out.println("Pair not found");
         }
 
         sc.close();

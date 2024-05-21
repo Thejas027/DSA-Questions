@@ -1,7 +1,7 @@
 *.output
 *.exe
 *.class 
-*.vscode
-Arrays-2
 STL
 Graph_series
+Arrays-2
+*.vscode
