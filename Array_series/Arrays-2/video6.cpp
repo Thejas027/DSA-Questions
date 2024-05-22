@@ -2,7 +2,7 @@
 using namespace std;
 
 // optimal solution to sort the Zero's,One's and Two's
-
+// BASED ON DUCTH NATIONAL FLAG ALGO
 void sortZerosOnesTwos(vector<int> &arr)
 {
       int n = arr.size();

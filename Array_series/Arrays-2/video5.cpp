@@ -35,11 +35,13 @@ bool arrEleSum(vector<int> arr, int target)
       return false;
 }
 
+// its a optimal solution, where it returns the index element of a given two target elements where an vector array is not sorted
 Pair arrEleSum2(vector<int> arr, int target)
 {
       int n = arr.size();
       int right = n - 1;
       int left = 0;
+      // sort(arr.begin(), arr.end());
       while (left < right)
       {
             int sum = arr[right] + arr[left];
@@ -52,14 +54,16 @@ Pair arrEleSum2(vector<int> arr, int target)
             else
                   left++;
       }
+
+      for (auto ele : arr)
+            cout << ele << " ";
+
       return Pair(-1, -1);
 }
 
-
-
 int main()
 {
-      vector<int> arr = {1, 5, 9};
+      vector<int> arr = {1, 5, 9, 2, 8, 4};
 
       int target;
       cout << "Enter the target element : ";
