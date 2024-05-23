@@ -11,7 +11,7 @@ int subArray(vector<int> arr)
             int sum = 0;
             for (int j = i; j < n; j++)
             {
-                  sum += arr[j];
+                  sum = accumulate(arr.begin() + i, arr.begin() + j + 1, 0);
                   maxi = max(maxi, sum);
             }
       }
@@ -30,8 +30,7 @@ int subArrayMaxSum(vector<int> arr)
       for (int i = 0; i < n; i++)
       {
             currentSum = max(arr[i], currentSum + arr[i]);
-            if (currentSum > maxSum)
-                  maxSum = currentSum;
+            maxSum = max(currentSum, maxSum);
       }
       return maxSum;
 }
@@ -39,8 +38,8 @@ int subArrayMaxSum(vector<int> arr)
 int main()
 
 {
-      // vector<int> arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
       vector<int> arr = {1, 2, 3, 4, 5};
-      cout << subArrayMaxSum(arr);
+      cout << "Brute Force Max Sum: " << subArray(arr) << endl;
+      cout << "Kadane's Max Sum: " << subArrayMaxSum(arr) << endl;
       return 0;
 }
