@@ -14,9 +14,7 @@ int longestSubArr(vector<int> arr, int target)
             {
                   sum += arr[j];
                   if (sum == target)
-                  {
                         len = max(len, j - i + 1);
-                  }
             }
       }
       return len;

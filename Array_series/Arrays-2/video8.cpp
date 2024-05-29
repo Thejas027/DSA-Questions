@@ -23,13 +23,11 @@ int subArray(vector<int> arr)
 
 int subArrayMaxSum(vector<int> arr)
 {
-      int n = arr.size();
       int currentSum = 0;
       int maxSum = 0;
-
-      for (int i = 0; i < n; i++)
+      for (const auto &value : arr)
       {
-            currentSum = max(arr[i], currentSum + arr[i]);
+            currentSum = max(value, currentSum + value);
             maxSum = max(currentSum, maxSum);
       }
       return maxSum;

@@ -55,8 +55,8 @@ Pair arrEleSum2(vector<int> arr, int target)
                   left++;
       }
 
-      for (auto ele : arr)
-            cout << ele << " ";
+      // for (auto ele : arr)
+      //       cout << ele << " ";
 
       return Pair(-1, -1);
 }
