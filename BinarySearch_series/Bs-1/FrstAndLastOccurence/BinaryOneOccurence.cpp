@@ -44,7 +44,7 @@ public:
 };
 int main()
 {
-    int arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1};
+    int arr[] = { 0, 0, 0, 0, 1, 1, 1};
     int key = 1;
     Bsearch b;
     cout << "index of first one occurence in binary infinite sorted array : " << b.findIdx(arr, key) << endl;

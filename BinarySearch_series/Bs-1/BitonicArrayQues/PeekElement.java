@@ -43,7 +43,7 @@ class BSearch {
 
 public class PeekElement {
     public static void main(String[] args) {
-        int arr[] = { 10, 20, 15, 2, 23, 90, 67 };
+        int arr[] = { 10, 20, 15, 2, 100, 0 };
         BSearch b = new BSearch();
         System.out.println("Peek element is at index [zero based index] : " + b.PeekEleIdx(arr));
     }

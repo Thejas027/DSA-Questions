@@ -51,9 +51,8 @@ public:
 };
 
 int main()
-    mnbxz
 {
-      vector<int> arr = {2, 4, 5, 10, 6, 1};
+      vector<int> arr = {2, 4, 55, 10, 6, 1};
       BitonicArray b;
       cout << "Max element in a given bitonic array : " << b.MaxEle(arr) << endl;
       return 0;

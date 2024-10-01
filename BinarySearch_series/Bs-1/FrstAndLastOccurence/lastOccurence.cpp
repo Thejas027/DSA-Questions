@@ -22,10 +22,10 @@ int LastOccurence(int *arr, int size, int key)
             result = mid;
             start = mid + 1;
         }
-        else if (key < arr[mid])
-            end = mid - 1;
-        else
+        else if (key > arr[mid])
             start = mid + 1;
+        else
+            end = mid - 1;
     }
 
     return result;
