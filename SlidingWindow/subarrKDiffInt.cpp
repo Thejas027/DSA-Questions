@@ -7,7 +7,7 @@ public:
             int n = nums.size();
             for (int i = 0; i < n; i++)
             {
-                  map<int> mp;
+                  map<int , int> mp;
                   for (int j = 0; j < n; j++)
                   {
                         mp[nums[i]]++;
