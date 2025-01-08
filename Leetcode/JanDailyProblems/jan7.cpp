@@ -45,17 +45,17 @@ private:
                         if (startIndex + subIndex >= main.size() ||
                             main[startIndex + subIndex] != sub[subIndex])
                         {
-                              subFits = false; // The substring doesn't match.
-                              break;           // No need to continue further for this start index.
+                              subFits = false;
+                              break;
                         }
                   }
 
                   if (subFits)
                   {
-                        return true; // Found a match, return true.
+                        return true;
                   }
             }
 
-            return false; // No match found.
+            return false;
       }
 };
