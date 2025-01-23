@@ -1,3 +1,5 @@
+// which returns true if both the strings are in anagram 
+
 class solution
 {
 public:
