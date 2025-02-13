@@ -27,7 +27,7 @@ public:
 
     bool palindromeNum(int n)
     {
-        int orginalNum = n;
+        int originalNum = n;
         int revno = 0;
         while (n > 0)
         {
@@ -35,7 +35,7 @@ public:
             n /= 10;
             revno = (revno * 10) + ld;
         }
-        return revno == orginalNum;
+        return revno == originalNum;
     }
 
     // function to reverse the number
@@ -54,7 +54,7 @@ public:
     // function to find the weather the given number is armstrong number or not
     bool Armstrong(int n)
     {
-        int orginalNum = n;
+        int originalNum = n;
         int DigitsNum = (int)log10(n) + 1;
         int sum = 0;
         while (n > 0)
@@ -63,7 +63,7 @@ public:
             sum += pow(ld, DigitsNum);
             n /= 10;
         }
-        return sum == orginalNum;
+        return sum == originalNum;
     }
 
     // function to find the divisor of a given number  Time complexcity--> O(n)
@@ -111,7 +111,7 @@ public:
             cout << n << " is not a prime number" << endl;
     }
 
-    // function to find the GCD || HCF of a given number (Eculidean Algorithm)
+    // function to find the GCD || HCF of a given number (Euclidean Algorithm)
     int gcd(int a, int b)
     {
         while (a > 0 && b > 0)

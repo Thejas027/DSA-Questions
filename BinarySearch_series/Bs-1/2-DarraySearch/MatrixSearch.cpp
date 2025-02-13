@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// returns the  element position index value else returns (-1,-1)
 pair<int, int> SearchEle(vector<vector<int>> arr, int key)
 {
     int n = arr.size();
@@ -29,4 +30,26 @@ int main()
     else
         cout << "Element not found." << endl;
     return 0;
+}
+
+// leet code question : 74. Search a 2D Matrix
+class solution
+{
+public:
+    bool searchMatrix(vector<vector<int>> &matrix, int target)
+    {
+        bool found = true;
+
+        for (int i = 0; i < matrix.size(); i++)
+        {
+            for (int j = 0; j < matrix[0].size(); j++)
+            {
+                if (matrix[i][j] == target)
+                    found = true;
+
+                break;
+            }
+        }
+        return found;
+    }
 }
