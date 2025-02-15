@@ -1,5 +1,5 @@
 /*
-program to find the maxmium element in a given Bitonic array [array which gradually increases upto point and decrases after the point]
+program to find the maximum element in a given Bitonic array [array which gradually increases upto point and decrases after the point]
 
     max ele in bitoinc array  ==  finding peak element
     arr[] : 2 4 5 10 8 6 1 ----> example of bitonic array
