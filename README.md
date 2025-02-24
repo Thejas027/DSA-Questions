@@ -61,13 +61,14 @@ Master the art of recognizing and implementing basic patterns in algorithms and 
 
 ## 7. Recursion 🔄
 
-This Recursion folder contains some basic porblems, to know how recuression works 
+This Recursion folder contains some basic problems, to know how recursion works 
+
 
 ---
 
 ## 8. Trees Series 🌳
 
-This folder contians some important questions on trees such has,<br>
+This folder contains some important questions on trees such has,<br>
 ->is tree balanced <br>
 ->max depth of a tree<br>
 ->max sum path<br>
