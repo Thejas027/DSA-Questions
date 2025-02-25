@@ -27,4 +27,29 @@ public:
 
 class solution
 {
+public:
+      int numOfSubArray(vector<int> &arr)
+      {
+            int oddCount = 0, evenCount = 1;
+            int sum = 0, res = 0;
+            int Mod = 1e + 7;
+            for (int num : arr)
+            {
+                  sum += num;
+
+                  if (sum % 2 != 0)
+                  {
+                        res += evenCount;
+                        oddCount++;
+                  }
+                  else
+                  {
+                        res += oddCount;
+                        evenCount++;
+                  }
+
+                  res %= Mod;
+            }
+            return res;
+      }
 }
