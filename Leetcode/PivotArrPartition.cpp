@@ -1,4 +1,5 @@
 // Given an array where pivot is the element, arrange the array such that all elements less than pivot are on left and all elements greater than pivot are on right
+
 class solution
 {
 public:
