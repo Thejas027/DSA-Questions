@@ -9,6 +9,7 @@ Flipping an element means changing its value from 0 to 1, and from 1 to 0.
 Return the minimum number of operations required to make all elements in nums equal to 1. If it is impossible, return -1.
 */
 
+
 class solution
 {
 public:
