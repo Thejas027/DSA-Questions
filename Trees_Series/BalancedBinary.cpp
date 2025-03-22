@@ -12,17 +12,17 @@ private:
             if (root == NULL)
                   return 0;
 
-            int leftHeigh = checkBalance(root->left);
-            if (leftHeigh == -1)
+            int leftHeight = checkBalance(root->left);
+            if (leftHeight == -1)
                   return -1;
 
             int rightHeight = checkBalance(root->right);
             if (rightHeight == -1)
                   return -1;
 
-            if (abs(leftHeigh - rightHeight) > 1)
+            if (abs(leftHeight - rightHeight) > 1)
                   return -1;
 
-            return max(leftHeigh, rightHeight) + 1;
+            return max(leftHeight, rightHeight) + 1;
       }
 }

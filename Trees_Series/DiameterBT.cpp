@@ -11,7 +11,7 @@ public:
             int leftDia = DiameterOfBinaryTree(root->left);
             int rightDia = DiameterOfBinaryTree(root->right);
 
-            int selfDia = leftHeight + rightHeight + 1;
+            int selfDia = leftHeight + rightHeight;
 
             return max(selfDia, max(leftHeight, rightHeight));
       }
