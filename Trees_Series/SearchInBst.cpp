@@ -3,6 +3,8 @@ class solution
 public:
       TreeNode *SearchInBst(TreeNode *root)
       {
+            if (!root)
+                  return NULL;
             while (!root && root->val != val)
             {
                   if (root->val >= val)
