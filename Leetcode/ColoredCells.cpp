@@ -1,3 +1,4 @@
+// to find the colored Cells  
 class solution
 {
 public:
