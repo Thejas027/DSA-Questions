@@ -10,8 +10,7 @@ langauge used is Cpp and even for some of the questions Java code is also availa
 4. [Hashing Basics](#hashing-basics)
 5. [Maps Implementation](#maps-implementation)
 6. [Basic Patterns](#basic-patterns)
-7. [Recursion](#recursion)
-8. [Trees Series](#trees-series)
+7. [Trees Series](#trees-series)
 
 -
 
