@@ -37,3 +37,46 @@ public:
             return prev1;
       }
 }
+
+// Recursive solution
+int
+frogJumpKDist(int index, vector<int> &stones, int k)
+{
+      if (index == 0)
+            return 0;
+
+      int minSteps = INT_MAX;
+
+      for (int j = 1; j <= k; j++)
+      {
+            if (index - j >= 0)
+            {
+                  int jump = abs(stones[index] - stones[index - j]) + frogJumpKDist(index - j, stones, k);
+                  minSteps = min(minSteps, jump);
+            }
+      }
+
+      return minSteps;
+}
+
+// Memoization method
+int frogJumKDist2(int ind, vector<int> &stones, int k)
+{
+      if (ind == 0)
+            return 0;
+      vector<int> &dp(stones.size(), 0);
+
+      if (dp[ind] != -1)
+            return dp[ind];
+
+      int minSteps = 0;
+      for (int j = 1; j < k; j++)
+      {
+            if (ind - j >= 0)
+            {
+                  int jump = abs(stones[ind] - stones[ind - j]) + frogJumKDist2(ind - j, stones, k);
+                  minSteps = min(jump, minSteps);
+            }
+      }
+      return dp[ind] = minSteps;
+}
