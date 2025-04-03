@@ -17,4 +17,22 @@ public:
             }
             return res;
       }
+
+}
+
+// Optimal approach with O(n) and with no extra space used
+class solution
+{
+public:
+      long long maxTripletVal(vector<int> &nums)
+      {
+            long ans = 0, iMax = 0, diff = 0;
+            for (int i = 0; i < nums.size(); i++)
+            {
+                  ans = max(ans, nums[i] * diff);
+                  diff = max(diff, iMax - nums[i]);
+                  iMax = max(iMax, (long long)nums[i]);
+            }
+            return ans;
+      }
 }
