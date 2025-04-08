@@ -1,3 +1,4 @@
+//partition of a given array 
 class solution {
       public : bool canPartition(vector<int> &nums){
             int total = accumulate(nums.begin() , nums.end() , 0);
