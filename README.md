@@ -2,6 +2,7 @@
 
 Welcome to the Strive Data Sheet Problems repository! This repository is a comprehensive collection of solutions to problems from Strive's data sheets. 📚💡
 langauge used is Cpp and even for some of the questions Java code is also available.
+
 ## Table of Contents 
 
 1. [Array Series](#array-series)
