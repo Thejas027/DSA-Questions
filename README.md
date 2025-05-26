@@ -15,7 +15,7 @@ langauge used is Cpp and even for some of the questions Java code is also availa
 
 -
 
-## 1. Array Series 🎯
+## 1. Array Series🎯
 
 Explore solutions to problems focusing on arrays, including manipulation, traversal, and sorting techniques,<br>
 ->Kadanes Algo <br>
@@ -25,7 +25,7 @@ Explore solutions to problems focusing on arrays, including manipulation, traver
 
 -
 
-## 2. Basic Maths Series 🔢
+## 2. Basic Maths Series🔢
 
 Discover a collection of problems and solutions that test your understanding of basic mathematical concepts and operations,<br>
 ->Extraction of digits <br>
@@ -35,31 +35,31 @@ Discover a collection of problems and solutions that test your understanding of 
 
 -
 
-## 3. Binary Search Series 🔍
+## 3. Binary Search Series🔍
 
 Delve into the binary search algorithm and its applications in various problem-solving scenarios. This series offers a deep dive into binary search techniques, optimizations, and related algorithms, empowering you to solve problems efficiently in logarithmic time complexity.
 
 -
 
-## 4. Hashing Basics 📂
+## 4. Hashing Basics📂
 
 Dive into the basics of hashing implementaion in Cpp,This series contain how a hashing can be used wehre here counting how many times certain number or character has been reapeated.
 
 -
 
-## 5. Maps Implementation 🗺️
+## 5. Maps Implementation🗺️
 
 Learn about maps and their implementation and folder contains how map can be used to count how many times the number has been repeated.
 
 -
 
-## 6. Basic Patterns 🎨
+## 6. Basic Patterns🎨
 
 Master the art of recognizing and implementing basic patterns in algorithms and data structures. This series provides solutions to problems that involve pattern recognition, iteration, and recursion, enhancing your ability to solve complex problems by breaking them down into simpler patterns.
 
 -
 
-## 7. Recursion 🔄
+## 7. Recursion🔄
 
 This Recursion folder contains some basic problems, to know how recursion works 
 
